@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>2XSix</title>
   <meta name="description" content="2XSix Official" />
   <meta property="og:title" content="2XSix" />
-  <meta property="og:description" content="2XSix 공식 홈페이지" />
+  <meta property="og:description" content="2XSix Official Homepage" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="2XSix" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,11 +14,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <style>
     :root{
-      --brand:#ff8c2a;             /* 브랜드 포인트(로고의 오렌지) */
-      --ink:#4a4a4a;               /* 본문 텍스트 */
+      --brand:#ff8c2a;             /* Brand Color */
+      --ink:#4a4a4a;               /* Body Font Color */
       --ink-weak:#666;
-      --bg:#ffffff;                /* 배경 */
-      --card:#f7f7f8;              /* 섹션 배경 */
+      --bg:#ffffff;                /* Background */
+      --card:#f7f7f8;              /* Background for card */
       --radius:20px;
       --shadow:0 10px 25px rgba(0,0,0,.07);
       --maxw:1100px;
@@ -51,7 +51,7 @@
     .kv{display:flex; align-items:center; justify-content:center; padding:28px;}
     .kv img{max-width:100%; height:auto;}
 
-    /* Info blocks */
+    /* Info blocks (Additional) */
     .blocks{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:18px 0 8px;}
     .block{background:var(--card); border-radius:var(--radius); padding:20px 18px; box-shadow:var(--shadow);} 
     .block h3{margin:0 0 8px; font-size:18px;}
@@ -76,36 +76,15 @@
       .hero h1{font-size:34px;}
     }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "2XSix",
-    "url": "https://www.2xsix.com",
-    "logo": "https://www.2xsix.com/logo.png",
-    "email": "info@2xsix.com",
-    "telephone": "+82-2-3402-2206",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "법원로 128 SK V1 메트로시티 B동 618호",
-      "addressLocality": "송파구",
-      "addressRegion": "서울시",
-      "postalCode": "",
-      "addressCountry": "KR"
-    }
-  }
-  </script>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="(주)투바이식스">
-        <!-- Inline data-URI logo for easy drop-in preview -->
-        
-        <span class = "accent">(주)투바이식스</span>
+      <a class="brand" href="#top" aria-label="Two by Six Inc.">
+        <span class="accent">2XSix Inc.</span>
       </a>
       <div class="cta">
-
+        <!-- CTA BTN-->
       </div>
     </div>
   </header>
@@ -114,42 +93,61 @@
     <section class="hero">
       <div class="container wrap">
         <div>
-          <div class="kv"><img src="OGOL.png" alt="OGOL 로고" /></div>
-          <h1>홈페이지에 오신 것을 환영합니다</h1>
-          <p>
-            간결하고 명확한 첫 인상. 아래 연락처를 통해 언제든 문의하세요. 회사 소개와 서비스 상세는
-            추후 섹션을 확장하여 손쉽게 추가할 수 있도록 구성했습니다.
-          </p>
-          <div class="cta">
-            <a class="btn primary" href="mailto:info@2xsix.com">지금 문의하기</a>
-            <a class="btn ghost" href="#contact">연락처 보기</a>
+          <div class="kv">
+            <img src="OGOL.png" alt="Global supplier in B2B furniture market" />
           </div>
-          <div class="blocks" style="margin-top:18px">
-            <div class="block"><h3>회사 소개</h3><p>합리적인 가구 공급</p></div>
-            <div class="block"><h3>주요 서비스</h3><p>B2B 공급을 통해 당신을 최고의 가구 회사 공급사로 만들어 드립니다.</p></div>
-            <div class="block"><h3>차별점</h3><p>자신만의 색깔을 담은 가구, 수량은 작지만 반드시 필요한 가구</p></div>
-          </div>
-        </div>
 
+          <h1>Two by six, a growing partner in the B2B furniture industry.</h1>
+
+          <p>
+            We are steadily advancing as a trusted partner in the B2B furniture sector, supporting clients from early concept through to reliable delivery.
+			Whether you require project-based engagements, long-term supply programs, or end-to-end support for building your own brand, our team provides attentive service, technical guidance, and consistent execution.
+			Our product capabilities span the full furniture category—including;
+			<h3>
+			Height-adjustable desk frames (HAT), Monitor arms, Seatings and Chair foldable bases, PC holders, fasteners (bolts and nuts), Steel drawer and cabinets, as well as wooden cabinets for both office and residential applications.
+			</h3>
+			With established production in Korea and China, we can meet your preferred country-of-origin requirements while maintaining strict quality control across sites.
+			Rather than competing on the lowest price, we prioritize durable materials, precise manufacturing, and dependable lead times to deliver superior value at a rational, performance-based price point.
+          </p>
+
+          <div class="cta">
+            <a class="btn primary" href="mailto:info@2xsix.com">E-mail</a>
+            <a class="btn ghost" href="#Preference" id="btnPref" aria-controls="Preference" aria-expanded="false">Project reference</a>
+          </div>
+
+          <!-- Toggle Section -->
+          <section id="Preference" aria-hidden="true"
+            style="overflow:hidden; max-height:0; transition:max-height .3s ease; margin-top:10px;">
+            <ul style="list-style:none; padding:12px 0 0; margin:0;">
+              <li>Aug.2023 <h3>HD Hyundai Project in Korea</h3></li>
+              <li>Apr.2024 <h3>Hyundai Steel Project in Korea</h3></li>
+              <li>Apr.2025 <h3>SK-C Tower Project in Korea</h3></li>
+              <li>Aug.2025 <h3>Cheil Office Project in Thailand</h3></li>
+              <li>Sep.2025 <h3>GM Motors Project in Korea</h3></li>
+			  <li>Oct.2025 <h3>Samsung Life Project in Korea</h3></li>
+            </ul>
+          </section>
+        </div>
       </div>
     </section>
 
     <section id="contact" class="contact">
       <div class="container">
-        <h2 style="margin:0 0 14px; font-size:28px">연락처 & 오시는 길</h2>
+        <h2 style="margin:0 0 14px; font-size:28px">Contact & Map</h2>
         <div class="grid">
           <div class="panel">
             <ul class="list">
-              <li><div class="label">이메일</div><div><a href="mailto:info@2xsix.com">info@2xsix.com</a></div></li>
-              <li><div class="label">전화</div><div><a href="tel:0234022206">02-3402-2206</a></div></li>
-              <li><div class="label">주소</div><div>서울시 송파구 법원로 128<br/>SK V1 메트로시티 B동 618호</div></li>
+              <li><div class="label">E-mail</div><div><a href="mailto:info@2xsix.com">info@2xsix.com</a></div></li>
+              <li><div class="label">Phone</div><div><a href="tel:0234022206">+82-2-3402-2206</a></div></li>
+              <li><div class="label">Office</div><div>B-618, 128, Beobwon-ro, Songpa-Gu, Seoul, Korea 05854</div></li>
+              <li><div class="label">Showroom</div><div>B-517, 128, Beobwon-ro, Songpa-Gu, Seoul, Korea 05854</div></li>
             </ul>
           </div>
           <div class="panel" style="padding:0; overflow:hidden">
-            <!-- 간단한 지도 임베드 (원하면 정식 API 키로 교체 가능) -->
-            <iframe title="2XSix 위치" width="100%" height="320" style="border:0"
+            <iframe title="2XSix Location" width="100%" height="320" style="border:0"
               loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EB%B2%95%EC%9B%90%EB%A1%9C%20128%20SK%20V1%20%EB%A9%94%ED%8A%B8%EB%A1%9C%EC%8B%9C%ED%8B%B0%20B%EB%8F%99%20618%ED%98%B8&output=embed"></iframe>
+              src="https://www.google.com/maps?q=%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EB%B2%95%EC%9B%90%EB%A1%9C%20128%20SK%20V1%20%EB%A9%94%ED%8A%B8%EB%A1%9C%EC%8B%9C%ED%8B%B0%20B%EB%8F%99%20618%ED%98%B8&output=embed">
+            </iframe>
           </div>
         </div>
       </div>
@@ -157,13 +155,41 @@
   </main>
 
   <footer>
-    <div class="container">© <span id="y">2025</span> 2XSix · <a href="mailto:info@2xsix.com">info@2xsix.com</a> · <a href="tel:0234022206">02-3402-2206</a></div>
+    <div class="container">© <span id="y">2025</span> 2XSix Inc · <a href="mailto:info@2xsix.com">info@2xsix.com</a> · <a href="tel:0234022206">+82-2-3402-2206</a></div>
   </footer>
 
   <script>
-    // 연도 자동 갱신
+    // Year Automatic Update
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Project reference toggle
+    (function(){
+      const btn = document.getElementById('btnPref');
+      const panel = document.getElementById('Preference');
+      let open = false;
+
+      function setOpen(state){
+        open = state;
+        if(open){
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          panel.setAttribute('aria-hidden','false');
+          btn.setAttribute('aria-expanded','true');
+        }else{
+          panel.style.maxHeight = '0';
+          panel.setAttribute('aria-hidden','true');
+          btn.setAttribute('aria-expanded','false');
+        }
+      }
+
+      btn.addEventListener('click', function(e){
+        e.preventDefault();           // Anti-Anker_Jump
+        setOpen(!open);
+      });
+
+      window.addEventListener('resize', () => {
+        if(open) panel.style.maxHeight = panel.scrollHeight + 'px';
+      });
+    })();
   </script>
 </body>
 </html>
-
